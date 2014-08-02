@@ -1,0 +1,223 @@
+#!/bin/bash
+#############################################
+# Copyright (C) 2014 StdMods
+# This file is open-source and is under the
+# GPL-V3 License.
+# Thanks for the comprension, StdMods.
+#############################################
+cd ..
+cd WORKING_*
+cd system
+echo "Press ENTER to continue..."
+read enterKey
+################################################
+# Start build.prop tweaks
+################################################
+echo "### Start MegaBlast System's Tweaks ###" >> build.prop
+echo "" >> build.prop
+echo "debug.sf.hw=1" >> build.prop
+echo "ro.HOME_APP_ADJ=1" >> build.prop
+echo "video.accelerate.hw=1" >> build.prop
+echo "persist.sys.use_dithering=1" >> build.prop
+echo " " >> build.prop
+echo "# System Tweaks" >> build.prop
+echo "ro.HOME_APP_ADJ=1" >> build.prop
+echo "ro.mot.eri.losalert.delay=1000" >> build.prop
+echo "ro.config.hw_fast_dormancy=1" >> build.prop
+echo "ro.ril.enable.amr.wideband=1" >> build.prop
+echo "ro.config.hw_fast_dormancy=1" >> build.prop
+echo "ro.config.hw_quickpoweron=true" >> build.prop
+echo " " >> build.prop
+echo "# Miscellaneous Tweaks" >> build.prop
+echo "persist.sys.NV_FPSLIMIT=90" >> build.prop
+echo "debug.qctwa.statusbar=1" >> build.prop
+echo "debug.qctwa.preservebuf=1" >> build.prop
+echo "debug.qc.hardware=true" >> build.prop
+echo "com.qc.hardware=true" >> build.prop
+echo "ro.telephony.sms_segment_size=160" >> build.prop
+echo "persist.telephony.support.ipv6=1" >> build.prop
+echo "persist.telephony.support.ipv4=1" >> build.prop
+echo "ro.config.hw_fast_dormancy=1" >> build.prop
+echo "persist.sys.shutdown.mode=hibernate" >> build.prop
+echo "ro.config.hw_power_saving=true" >> build.prop
+echo "ro.media.enc.hprof.vid.fps=65" >> build.prop
+echo "ro.mot.buttonlight.timeout=1" >> build.prop
+echo "ro.ril.set.mtu1472=1" >> build.prop
+echo "touch.presure.scale=0.001" >> build.prop
+echo " " >> build.prop
+echo "# Signal Tweaks" >> build.prop
+echo "ro.ril.hsxpa=1" >> build.prop
+echo "ro.ril.gprsclass=10" >> build.prop
+echo "ro.ril.hsdpa.category=8" >> build.prop
+echo "ro.ril.hsupa.category=6" >> build.prop
+echo "persist.cust.tel.eons=1" >> build.prop
+echo " " >> build.prop
+echo "# Wireless Speed Tweaks" >> build.prop
+echo "net.tcp.buffersize.default=4096,87380,256960,4096,16384,256960" >> build.prop
+echo "net.tcp.buffersize.wifi=4096,87380,256960,4096,16384,256960" >> build.prop
+echo "net.tcp.buffersize.umts=4096,87380,256960,4096,16384,256960" >> build.prop
+echo "net.tcp.buffersize.gprs=4096,87380,256960,4096,16384,256960" >> build.prop
+echo "net.tcp.buffersize.edge=4096,87380,256960,4096,16384,256960" >> build.prop
+echo "net.ipv4.tcp_ecn=0" >> build.prop
+echo "net.ipv4.route.flush=1" >> build.prop
+echo "net.ipv4.tcp_rfc1337=1" >> build.prop
+echo "net.ipv4.ip_no_pmtu_disc=0" >> build.prop
+echo "net.ipv4.tcp_sack=1" >> build.prop
+echo "net.ipv4.tcp_fack=1" >> build.prop
+echo "net.ipv4.tcp_window_scaling=1" >> build.prop
+echo "net.ipv4.tcp_timestamps=1" >> build.prop
+echo "net.ipv4.tcp_rmem=4096 39000 187000" >> build.prop
+echo "net.ipv4.tcp_wmem=4096 39000 187000" >> build.prop
+echo "net.ipv4.tcp_mem=187000 187000 187000" >> build.prop
+echo "net.ipv4.tcp_no_metrics_save=1" >> build.prop
+echo "net.ipv4.tcp_moderate_rcvbuf=1" >> build.prop
+echo " " >> build.prop
+echo "# Makes streaming videos stream faster" >> build.prop
+echo "media.stagefright.enable-player=true" >> build.prop
+echo "media.stagefright.enable-meta=true" >> build.prop
+echo "media.stagefright.enable-scan=true" >> build.prop
+echo "media.stagefright.enable-http=true" >> build.prop
+echo "media.stagefright.enable-record=true" >> build.prop
+echo " " >> build.prop
+echo "# Website Bypass" >> build.prop
+echo "net.rmnet0.dns1=8.8.8.8" >> build.prop
+echo "net.rmnet0.dns2=8.8.4.4" >> build.prop
+echo "net.dns1=8.8.8.8" >> build.prop
+echo "net.dns2=8.8.4.4" >> build.prop
+echo " " >> build.prop
+echo "# Graphics Enhancement" >> build.prop
+echo "debug.performance.tuning=1" >> build.prop
+echo "video.accelerate.hw=1" >> build.prop
+echo "ro.media.dec.jpeg.memcap=20000000" >> build.prop
+echo "ro.media.enc.hprof.vid.bps=8000000" >> build.prop
+echo "ro.media.enc.jpeg.quality=100" >> build.prop
+echo " " >> build.prop
+echo "# Disables data sent and logging" >> build.prop
+echo "ro.config.nocheckin=1" >> build.prop
+echo "profiler.force_disable_err_rpt=1" >> build.prop
+echo "profiler.force_disable_ulog=1" >> build.prop
+echo " " >> build.prop
+echo "# Scrolling Responsiveness" >> build.prop
+echo "windowsmgr.max_events_per_sec=90" >> build.prop
+echo "persist.cust.tel.eons=1" >> build.prop
+echo " " >> build.prop
+echo "# Power Saving Tweaks" >> build.prop
+echo "ro.ril.disable.power.collapse=1" >> build.prop
+echo "pm.sleep_mode=1" >> build.prop
+echo "wifi.supplicant_scan_interval=180" >> build.prop
+echo " " >> build.prop
+echo "# Dialing Tweaks" >> build.prop
+echo "ro.telephony.call_ring.delay=0" >> build.prop
+echo "ro.lge.proximity.delay=25" >> build.prop
+echo "mot.proximity.delay=25" >> build.prop
+echo " " >> build.prop
+echo "# DalvikVM" >> build.prop
+echo "dalvik.vm.verify-bytecode=false" >> build.prop
+echo "dalvik.vm.execution-mode=int:fast" >> build.prop
+echo "dalvik.vm.checkjni=false" >> build.prop
+echo "dalvik.vm.dexopt-data-only=1" >> build.prop
+echo "dalvik.vm.heapstartsize=1m" >> build.prop
+echo "dalvik.vm.heapgrowthlimit=64m" >> build.prop
+echo "dalvik.vm.heapsize=128m" >> build.prop
+echo "dalvik.vm.verify-bytecode=false" >> build.prop
+echo "dalvik.vm.execution-mode=int:jit" >> build.prop
+echo "dalvik.vm.lockprof.threshold=250" >> build.prop
+echo "dalvik.vm.dexopt-flags=m=v,o=y" >> build.prop
+echo "dalvik.vm.jmiopts=forcecopy" >> build.prop
+echo " " >> build.prop
+echo "# Performance" >> build.prop
+echo "debug.composition.type=gpu" >> build.prop
+echo "ro.max.fling_velocity=20000" >> build.prop
+echo "ro.min.fling_velocity=18000" >> build.prop
+echo "debug.performance.tuning=1" >> build.prop
+echo "debug.kill_allocating_task=0" >> build.prop
+echo "debug.overlayui.enable=1" >> build.prop
+echo "debug.egl.profiler=1" >> build.prop
+echo "debug.egl.hw=1" >> build.prop
+echo "debug.sf.hw=1" >> build.prop
+echo "hw3d.force=1" >> build.prop
+echo "hw2d.force=1" >> build.prop
+echo "force_hw_ui=true" >> build.prop
+echo "profiler.force_disable_err_rpt=1" >> build.prop
+echo "profiler.force_disable_ulog=1" >> build.prop
+echo "ro.min_pointer_dur=8" >> build.prop
+echo "debug.kill_allocating_task=0" >> build.prop
+echo "persist.sys.ui.hw=1" >> build.prop
+echo "ro.debuggable=1" >> build.prop
+echo "ro.config.disable.hw_accel=false" >> build.prop
+echo "ro.kernel.android.checkjni=0" >> build.prop
+echo "persist.sys.purgeable_assets=1" >> build.prop
+echo "persist.sys.use_dithering=1" >> build.prop
+echo "ro.secure=0" >> build.prop
+echo "ro.min_pointer_dur=1" >> build.prop
+echo " " >> build.prop
+echo "# 16bit Transparency" >> build.prop
+echo "persist.sys.use_16bpp_alpha=1" >> build.prop
+echo " " >> build.prop
+echo "### End MegaBlast System's Tweaks ###" >> build.prop
+###################################################################
+# End build.prop tweaks
+###################################################################
+
+###################################################################
+#°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+###################################################################
+
+###################################################################
+# Start Audio Optimization...
+###################################################################
+cd ..
+cd ..
+ls
+echo "Please enter working folder name.."
+echo -n "> "
+read wk
+if [ ! -e $wk ]
+then
+  clear
+  echo "$wk doesn't exist, please try again!"
+  echo "Please enter working folder name.."
+echo -n "> "
+read wk
+  if [ ! -e $wk ]
+  then
+    echo "Error, operation broken!"
+	echo "Press ENTER to continue..."
+	read enterKey
+	exit 0
+  else
+    echo "The folder $wk is correct!"
+  fi
+else
+  echo "The folder $wk is correct!"
+fi
+sys=$wk/system
+cp -f audio/bin/beatsbass $sys/bin
+cp -f audio/bin/beatsnormal $sys/bin
+cp -f audio/bin/sound $sys/bin
+cp -f audio/bin/sound8960 $sys/bin
+cp -f audio/bin/spkamp $sys/bin
+cp -f audio/etc/* $sys/etc
+mkdir $sys/etc/audio
+cd $sys/etc
+mkdir soundimage
+cd ..
+cd ..
+cd ..
+cp -f audio/etc/audio/* $sys/etc/audio
+cp -f audio/etc/soundimage/* $sys/etc/soundimage
+cp -f audio/lib/* $sys/lib
+cd $sys/lib
+mkdir soundfx
+cd ..
+cd ..
+cd ..
+cp -f audio/lib/soundfx/* $sys/lib/soundfx
+cd $wk
+cd system/bin
+ls -a
+echo "Press ENTER to continue..."
+read enterKey
+echo "MegaBlast Optimize Done!"
+echo "Now you continue to build rom!"
+read enterKey
