@@ -361,6 +361,10 @@ if [ $megab == "y" ]
 then
 scripts/megablast
 fi
+if [ $megab == "*" ]
+then
+echo "Invalid input, skip optimization process..."
+fi
 
 #
 # Create update.zip
